@@ -58,5 +58,10 @@ namespace TransportFinderView
             }
 
         }
+
+        private void Search_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
