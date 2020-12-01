@@ -26,19 +26,20 @@
             <ColumnDefinition x:Name="Abstandrechts" Width="15"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="MeineLocation" Grid.Column="1" Grid.Row="1"  Content="IconComing"  Margin="0,0,20,20"/>
-        <ComboBox x:Name="Abfahrtsstation"  IsEditable="True" KeyDown="StationSuche_KeyDown" Grid.Column="2" Grid.Row="1" FontSize="18" MinWidth="200" Text="Von"  HorizontalAlignment="Stretch" Margin="0,0,20,20" />
+        <ComboBox x:Name="Abfahrtsstation"   IsEditable="True" KeyDown="StationSuche_KeyDown" Grid.Column="2" Grid.Row="1" FontSize="18" MinWidth="200" Text="Von"  HorizontalAlignment="Stretch" Margin="0,0,20,20" />
         <TextBox Text="->" Grid.Column="3" Width="20" Grid.Row="1" BorderBrush="White" Margin="0,0,20,20"/>
         <ComboBox x:Name="Ankunftsstation" IsEditable="True" KeyDown="StationSuche_KeyDown" Grid.Column="4" Grid.Row="1" FontSize="18" MinWidth="200" Text="Nach" HorizontalAlignment="Stretch" Margin="0,0,20,20"/>
-        <Button x:Name="Search" Click="Search_Click1" Click="Search_Click"  Grid.Column="5" Grid.Row="1" Content="IconComing" Margin="0,0,0,20"/>
+        <Button x:Name="Search" Click="Search_Click"  Grid.Column="5" Grid.Row="1" Content="IconComing" Margin="0,0,0,20"/>
         <DatePicker Grid.Row="2" Grid.Column="2" Margin="0,0,20,20"/>
         <Button x:Name="MapOeffnen" Grid.Column="5" Grid.Row="2"  Content="IconComing"  Margin="0,0,20,20"/>
-        <DataGrid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5">
+        <DataGrid x:Name="VerbindungenGrid"  AutoGenerateColumns="True" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Abfahrt" Width="*"/>
                 <DataGridTextColumn Header="Verbindung" Width="*"/>
                 <DataGridTextColumn Header="Ankunft" Width="*"/>
                 <DataGridTextColumn Header="Share" Width="*"/>
             </DataGrid.Columns>
+            <RowDefinition></RowDefinition>
         </DataGrid>
         <CheckBox x:Name="DarkmodeCheckbox" HorizontalAlignment="Right" Grid.Column="5" Grid.Row="4" VerticalAlignment="Bottom"/>
         <Label Margin="0,0,20,0" Content="Darkmode On:" Grid.Column="5" Grid.Row="4" VerticalAlignment="Bottom"/>
